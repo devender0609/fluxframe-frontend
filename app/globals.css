@@ -1,0 +1,35 @@
+/* app/globals.css */
+
+/* If your project uses Tailwind, keep these lines. They were already working earlier. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark color scheme for consistent form controls, etc. */
+:root { color-scheme: dark; }
+
+html, body {
+  height: 100%;
+}
+
+/* Subtle grid background used by the layout */
+.bg-grid {
+  background-color: #0b0f19;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px;
+  background-position: -1px -1px, -1px -1px;
+}
+
+/* Small “MVP” pill used in the header */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+  background: #e5e7eb;
+}

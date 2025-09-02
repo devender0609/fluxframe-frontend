@@ -1,0 +1,1 @@
+export default function ProgressBar(){ return (<div className="progress-wrap"><div className="progress-bar"></div></div>); }

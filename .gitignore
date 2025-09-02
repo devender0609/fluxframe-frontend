@@ -1,0 +1,16 @@
+﻿# deps & build
+node_modules/
+.next/
+.vercel/
+out/
+dist/
+
+.env
+.env.*
+!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+# ignore any stray nested copy
+frontend/
