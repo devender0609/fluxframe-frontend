@@ -2,14 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // We serve a minimal service worker via /public/sw.js, no plugin needed.
+  // We serve a minimal service worker via /public/sw.js; no plugin needed.
   images: { unoptimized: true },
 
-  // Keep CI happy while you iterate (optional—tighten later).
+  // Keep CI happy while you iterate (tighten later if you want).
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 
-  // Faster cold starts on Vercel functions.
+  // Faster cold starts for Vercel functions
   output: 'standalone',
 };
 
