@@ -2,15 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // We serve a minimal service worker via /public/sw.js; no plugin needed.
-  images: { unoptimized: true },
-
-  // Keep CI happy while you iterate (tighten later if you want).
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-
-  // Faster cold starts for Vercel functions
-  output: 'standalone',
+  // Forward all /api/* and /media/* to your backend at runtime
+  async rewrites() {
+    const apiBase = process.env.BACKEND_ORIGIN || 'https://api.fluxframe.org';
+    return [
+      { source: '/api/:path*',  destination: `${apiBase}/api/:path*` },
+      { source: '/media/:path*', destination: `${apiBase}/media/:path*` },
+    ];
+  },
 };
 
 export default nextConfig;
